@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "image": "../../../assets/books/1984 by George Orwell.jpg",
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 12.40,
+    "quantity":10
+  },
+  {
+    "id": "2",
+    "image": "../../../assets/books/Anna Karenina Leo Tolstoy.jpg",
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "price": 20.94,
+    "quantity":10
+  },
+  {
+    "id": "3",
+    "image": "'../../../assets/books/Atonement Ian McEwan.jpg",
+    "title": "Atonement",
+    "author": "Ian McEwan",
+    "price": 14.99,
+    "quantity":10
+  },
+  {
+    "id": "4",
+    "image": "../../../assets/books/Brave New World by Aldous Huxley.jpg",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "price": 12.94,
+    "quantity":10
+  },
+  {
+    "id": "5",
+   "image": "../../../assets/books/David Copperfield Charles Dickens.jpg",
+    "title": "David Copperfield",
+    "author": "Charles Dickens",
+    "price": 18.80,
+    "quantity":10
+  },
+  {
+    "id": "6",
+    "image": "../../../assets/books/Don Quixote.jpg",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "price": 15.94,
+    "quantity":10
+  },
+  {
+    "id": "7",
+    "image": "../../../assets/books/Emma Jane Austen.jpg",
+    "title": "Emma",
+    "author": "Jane Austen",
+    "price": 25.30,
+    "quantity":10
+  },
+  {
+    "id": "8",
+    "image": "../../../assets/books/Gulliver's Travels Jonathan Swift.jpg",
+    "title": "Gulliver's Travels",
+    "author": "Jonathan Swift",
+    "price": 30.0,
+    "quantity":10
+  },
+  {
+    "id": "9",
+    "image": "../../../assets/books/Little Women Louisa M. Alcott.jpg",
+    "title": "Little Women",
+    "author": "Louisa M. Alcott",
+    "price": 7.17,
+    "quantity":10
+  },
+  {
+    "id": "10",
+    "image": "../../../assets/books/One Hundred Years of Solitude Gabriel García Márquez.jpg",
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "price": 10.56,
+    "quantity":10
+  },
+  {
+    "id": "11",
+    "image": "../../../assets/books/The Book of Laughter and Forgetting Milan Kundera.jpg",
+    "title": "The Book of Laughter and Forgetting",
+    "author": "Milan Kundera",
+    "price": 14.65,
+    "quantity":10
+  },
+  {
+    "id": "12",
+    "image": "../../../assets/books/The Brothers Karamazov Fyodor Dostoevsky.jpg",
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "price": 22.88,
+    "quantity":10
+  }
+]
