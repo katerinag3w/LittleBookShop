@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/Services/cart.service';
-import { Book } from 'src/assets/Book';
+
 import { CartItem } from 'src/assets/CartItem';
+
+import * as JsonToXML from 'js2xmlparser';
+import { Order } from 'src/assets/Order';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -15,8 +19,9 @@ export class ShoppingCartComponent implements OnInit {
 
   stringifiedData: any;
   payment: any;
+  MyOrder: any;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   items$ = this.cartService.items$;
   totalPrice$ = this.cartService.totalPrice$;
@@ -52,9 +57,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   buy() {
-    //console.log(this.cartItems);
-    //console.log(this.totalDis);
-
     // Convert to JSON
     this.stringifiedData = JSON.stringify(this.cartItems);
     this.payment = JSON.stringify(this.totalDis);
@@ -62,9 +64,17 @@ export class ShoppingCartComponent implements OnInit {
     console.log('Price :', this.payment);
 
     // Convert to XML
-    this.stringifiedData = JSON.stringify(this.cartItems);
-    this.payment = JSON.stringify(this.totalDis);
-    console.log('Cart :', this.stringifiedData);
-    console.log('Price :', this.payment);
+    let order: Order = {
+      books: this.cartItems,
+      price: this.total,
+      priceAfterDiscount: this.totalDis,
+    };
+
+    this.MyOrder = JSON.stringify(order);
+    this.MyOrder = JsonToXML.parse('order', this.MyOrder);
+    console.log('order', this.MyOrder);
+
+    //Navigate to Shopping List and Show Order
+    this.router.navigate(['shopping-list', this.MyOrder]);
   }
 }

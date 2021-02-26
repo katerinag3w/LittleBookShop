@@ -8,6 +8,7 @@ import { ProductListComponent } from './content/intro/product-list/product-list.
 import { ShoppingCartComponent } from './content/intro/shopping-cart/shopping-cart.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RouterModule, Routes } from '@angular/router';
     ShoppingListComponent,
     ProductListComponent,
     ShoppingCartComponent,
+    PageNotFoundComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -26,6 +28,7 @@ import { RouterModule, Routes } from '@angular/router';
     ShoppingListComponent,
     ProductListComponent,
     ShoppingCartComponent,
+    PageNotFoundComponent,
   ],
 })
 export class BookShopModule {}

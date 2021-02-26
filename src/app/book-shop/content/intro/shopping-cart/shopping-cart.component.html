@@ -16,28 +16,34 @@
       <!-- Title -->
       <div class="row">
         <div class="col-md-8">
-          <span><strong>{{item.title}} - </strong></span><span>{{item.author}}</span>
+          <span>
+            <strong class="d-inline">{{item.title}} - </strong>
+          </span>
+          <span class="d-inline">{{item.author}}</span>
         </div>
-        <div class="col-md-2">
-          <button class="btn" (click)="deleteProductFromCart(item,index)"><i class="fas fa-trash-alt"></i></button>
+        <div class="col-md-2 text-right">
+          <button class="btn trash" (click)="deleteProductFromCart(item,index)"><i class="fas fa-times"></i></button>
+          <!-- <button class="btn" (click)="deleteProductFromCart(item,index)"><i class="fas fa-trash-alt"></i></button> -->
         </div>
       </div>
       <!-- Title -->
 
       <!-- Quantity-Price -->
       <div class="row">
-        <div class="col quantity">
 
-          <button class="btn btn-sm" type="button" name="button" (click)="reduceProductFromCart(item,index)">
-            <i class="fas fa-minus"></i>
-          </button>
-          <span>{{item.quantityToBuy}}</span>
-          <button class="btn btn-sm" type="button" name="button" (click)="addProductToCart(item)">
-            <i class="fas fa-plus"></i>
-          </button>
-          <!-- <input type="text" name="name" value="1"> -->
-
+        <div class="col ">
+          <div class="row quantity d-inline">
+            <button class="btn btn-sm" type="button" name="button" (click)="reduceProductFromCart(item,index)">
+              <i class="fas fa-minus"></i>
+            </button>
+            <span>{{item.quantityToBuy}}</span>
+            <button class="btn btn-sm" type="button" name="button" (click)="addProductToCart(item)">
+              <i class="fas fa-plus"></i>
+            </button>
+            <!-- <input type="text" name="name" value="1"> -->
+          </div>
         </div>
+
         <div class="col">
           <strong>{{ item.price*item.quantityToBuy |currency: 'EUR':'symbol':undefined:'el-GR' }}</strong>
         </div>
@@ -49,7 +55,7 @@
 
   <li class="list-group-item active">
     <div class="row">
-      <div class="col">
+      <div class="col d-inline">
         <strong>Total</strong>
       </div>
       <div class="col text-right">
@@ -71,7 +77,5 @@
   <button class="list-group-item btn  btn-success active" (click)="buy()">
     <h5 class="text-center">Buy &nbsp;<i class="fas fa-shopping-basket"></i></h5>
   </button>
-
-
 
 </ul>
